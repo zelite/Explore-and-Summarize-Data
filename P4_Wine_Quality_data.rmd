@@ -1,9 +1,9 @@
 ---
 title: "Explore and Summarize Data"
-author: "José Alves-Rausch"
+author: "JosÃ© Alves-Rausch"
 date: "22nd February 2016"
-output: 
-  html_document: 
+output:
+  html_document:
     fig_caption: yes
     keep_md: yes
     theme: readable
@@ -15,7 +15,7 @@ output:
 This project aims at use R and exploratory data analysis techniques to explore a public available dattaset about Wine Quality. The paper covering the dataset is available at [Elsevier](http://dx.doi.org/10.1016/j.dss.2009.05.016) and a short description of the available variables and their meanings is found on this [description file](data_set_description.txt).
 
 The dataset contains several physicochemical attributes from red variants of the Portuguese "Vinho Verde" wine and sensory classification made by wine experts.
-   
+
 
 
 # Data analysis and exploration
@@ -96,7 +96,7 @@ plot_and_summary("volatile.acidity", binwidth = 0.02)+
 
 ```
 
-The distribution of volatile acidity is non-symmetric and bimodal with two peaks at 0.4 and 0.6. The median value is 0.52. Most observations fall in the range 0.39 - 0.64 and outliers on the higher end of the scale are visible. 
+The distribution of volatile acidity is non-symmetric and bimodal with two peaks at 0.4 and 0.6. The median value is 0.52. Most observations fall in the range 0.39 - 0.64 and outliers on the higher end of the scale are visible.
 
 ## Citric acid
 
@@ -238,9 +238,9 @@ make_box_with_dots <- function(variable){
   ggplot(data = wines, aes_q(x = ~quality, y = as.name(variable)))+
     geom_boxplot()+
     geom_jitter(width = 0.7, alpha = 1/10)+
-    geom_line(aes(group = 1), 
-                  stat = "summary", 
-                  fun.y = median, 
+    geom_line(aes(group = 1),
+                  stat = "summary",
+                  fun.y = median,
                   color = "#E74C3C",
                   size = 1,
                   alpha = 0.8)
@@ -509,7 +509,7 @@ The relationship between sulphate levels and sulfur dioxide is very weak.
 ## Correlations with quality
 
 ```{r echo=FALSE}
-cor(x = wines[1:11], 
+cor(x = wines[1:11],
     y = as.numeric(wines$quality),
     method = "spearman")
 
@@ -525,7 +525,7 @@ cor(x = wines[1:11],
 The wine quality is higher has stronger relationship with the volatile acidity, citric acid, sulphates and alcohol content. The correlation coefficients show us the strength of the relationship with the remaining variables.
 
 ```{r echo=FALSE}
-cor(x = wines[1:11], 
+cor(x = wines[1:11],
     y = as.numeric(wines$quality),
     method = "spearman")
 
@@ -556,12 +556,12 @@ As a starting point let us have a look at a correlation matrix:
 
 
 
-correlations <- as.data.frame(cor(data.frame(wines[1:11], 
-                                  quality_num = as.numeric(wines$quality)), 
+correlations <- as.data.frame(cor(data.frame(wines[1:11],
+                                  quality_num = as.numeric(wines$quality)),
                                   method = "spearman")) %>%
                 add_rownames(var = "Var1") %>% # need row names for the gathering
-                gather(key = "Var2", 
-                      value = "correlation", 
+                gather(key = "Var2",
+                      value = "correlation",
                       -Var1)
 
 ggplot(data = correlations, aes(x = Var1, y = Var2))+
@@ -634,7 +634,7 @@ cor.test(~ alcohol + sulphates, data = wines)
 
 ### Talk about some of the relationships you observed in this part of the investigation. Were there features that strengthened each other in terms of looking at your feature(s) of interest?
 
-The main relationships explored were between the biggest correlators with quality. 
+The main relationships explored were between the biggest correlators with quality.
 
 We have seen how alcohol and volatile acidity relate with quality. Higher alcohol and lower acidity give in general better quality wines.
 
@@ -682,7 +682,7 @@ scatter_with_quality_color(x = "alcohol", y = "volatile.acidity")+
   ggtitle("Quality is affected by volatile acidity and alcohol")+
   labs(color = "Quality Rating")+
   theme(text = element_text(size = 20))
-  
+
 
 ```
 

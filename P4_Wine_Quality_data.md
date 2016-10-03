@@ -7,7 +7,7 @@ José Alves-Rausch
 This project aims at use R and exploratory data analysis techniques to explore a public available dattaset about Wine Quality. The paper covering the dataset is available at [Elsevier](http://dx.doi.org/10.1016/j.dss.2009.05.016) and a short description of the available variables and their meanings is found on this [description file](data_set_description.txt).
 
 The dataset contains several physicochemical attributes from red variants of the Portuguese "Vinho Verde" wine and sensory classification made by wine experts.
-   
+
 
 
 # Data analysis and exploration
@@ -76,7 +76,7 @@ The median fixed acidity in the wines present in the dataset is 7.90 $g/dm^3$. M
 
 ![](P4_Wine_Quality_data_files/figure-html/volatile.acidity-1.png)<!-- -->
 
-The distribution of volatile acidity is non-symmetric and bimodal with two peaks at 0.4 and 0.6. The median value is 0.52. Most observations fall in the range 0.39 - 0.64 and outliers on the higher end of the scale are visible. 
+The distribution of volatile acidity is non-symmetric and bimodal with two peaks at 0.4 and 0.6. The median value is 0.52. Most observations fall in the range 0.39 - 0.64 and outliers on the higher end of the scale are visible.
 
 ## Citric acid
 
@@ -870,7 +870,7 @@ For the range of sulfates between 0 and 1, alcohol and sulphates appear to have 
 
 ### Talk about some of the relationships you observed in this part of the investigation. Were there features that strengthened each other in terms of looking at your feature(s) of interest?
 
-The main relationships explored were between the biggest correlators with quality. 
+The main relationships explored were between the biggest correlators with quality.
 
 We have seen how alcohol and volatile acidity relate with quality. Higher alcohol and lower acidity give in general better quality wines.
 

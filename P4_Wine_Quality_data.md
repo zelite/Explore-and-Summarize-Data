@@ -4,7 +4,7 @@ José Alves-Rausch
 
 # Introduction
 
-This project aims at use R and exploratory data analysis techniques to explore a public available dattaset about Wine Quality. The paper covering the dataset is available at [Elsevier](http://dx.doi.org/10.1016/j.dss.2009.05.016) and a short description of the available variables and their meanings is found on this [description file](data_set_description.txt).
+This project aims at use R and exploratory data analysis techniques to explore a public available dataset about Wine Quality. The paper covering the dataset is available at [Elsevier](http://dx.doi.org/10.1016/j.dss.2009.05.016) and a short description of the available variables and their meanings is found on this [description file](data_set_description.txt).
 
 The dataset contains several physicochemical attributes from red variants of the Portuguese "Vinho Verde" wine and sensory classification made by wine experts.
 
@@ -40,7 +40,7 @@ First things first. Lets have a glimpse at the data.
 ## $ quality              (fctr) 5, 5, 5, 6, 5, 5, 5, 7, 7, 5, 5, 5, 5, 5...
 ```
 
-There are  12 variables and 1599 observations. All variables are except for the quality score which is represented as a ordered factor.
+There are  12 variables and 1599 observations. All variables are numerical except for the quality score which is represented as a ordered factor.
 
 ## Quality
 
@@ -139,7 +139,7 @@ The distribution of free sulfur dioxide concentrations is right skewed. The medi
 
 ![](P4_Wine_Quality_data_files/figure-html/total.sulfur.dioxide-1.png)<!-- -->
 
-The distribution of total sulfur dioxide is right skewed with a median value of 38 $mg/dm^3$. On the right taill we can see a local maximum near 80. There's a gap between 165 and 278 with only two wines with a concentration greater than or equal to 278.
+The distribution of total sulfur dioxide is right skewed with a median value of 38 $mg/dm^3$. On the right tail we can see a local maximum near 80. There's a gap between 165 and 278 with only two wines with a concentration greater than or equal to 278.
 
 ## Density
 
@@ -152,7 +152,7 @@ The distribution of total sulfur dioxide is right skewed with a median value of 
 
 ![](P4_Wine_Quality_data_files/figure-html/density-1.png)<!-- -->
 
-The density of wines varies few, with most of the values between 0.9956 and 0.9967. The distribution is almost symetric and has median value of 0.9968 $g/cm^3$. The density if close to the density of water (1 $g/cm^3$ at 4 $^\circ C$).
+The density of wines varies few, with most of the values between 0.9956 and 0.9967. The distribution is almost symmetric and has median value of 0.9968 $g/cm^3$. The density if close to the density of water (1 $g/cm^3$ at 4 $^\circ C$).
 
 ## pH
 
@@ -164,7 +164,7 @@ The density of wines varies few, with most of the values between 0.9956 and 0.99
 
 ![](P4_Wine_Quality_data_files/figure-html/pH-1.png)<!-- -->
 
-All wines have low pH. This makes sense since trough the fermentation process, acids are produced. The distribution seems simetrical or could be also considered bimodal with both peaks very close to each other. There seems to be a local maximum at around 3.2 and then another one at 3.35.  The median value is 3.31, and most wines have a pH between 3.21 and 3.4.
+All wines have low pH. This makes sense since trough the fermentation process, acids are produced. The distribution seems symmetrical or could be also considered bimodal with both peaks very close to each other. There seems to be a local maximum at around 3.2 and then another one at 3.35.  The median value is 3.31, and most wines have a pH between 3.21 and 3.4.
 
 ## Sulphates
 
@@ -189,7 +189,7 @@ The median value of sulphates is 0.62 and most wines have a concentration betwee
 
 ![](P4_Wine_Quality_data_files/figure-html/alcohol-1.png)<!-- -->
 
-The alcohol concentration distribution is right skewed. There seems to be a natural border on the left side. Maybe a minimum ammount of alcoohol needs to be present for the drink to be considered a wine? The highest peak of the distribution is at 9.5 % alchool and the median value is 10.20%. The maximum amount of alcohol present in the dataset is 14.90.
+The alcohol concentration distribution is right skewed. There seems to be a natural border on the left side. Maybe a minimum amount of alcohol needs to be present for the drink to be considered a wine? The highest peak of the distribution is at 9.5 % alcohol and the median value is 10.20%. The maximum amount of alcohol present in the dataset is 14.90.
 
 
 
@@ -197,7 +197,7 @@ The alcohol concentration distribution is right skewed. There seems to be a natu
 
 ### What is the structure of your dataset?
 
-The dataset has 12 variables regarding 1599 observations. Each observation correspondes to a red wine sample. 11 variables correspond to the result of a physochemical test and one variable (`quality`) corresponds to the result of a sensory panel rating.
+The dataset has 12 variables regarding 1599 observations. Each observation corresponds to a red wine sample. 11 variables correspond to the result of a physicochemical test and one variable (`quality`) corresponds to the result of a sensory panel rating.
 
 
 ### What is/are the main feature(s) of interest in your dataset?
@@ -207,9 +207,9 @@ The main feature of interest is the quality rating.
 
 ### What other features in the dataset do you think will help support your investigation into your feature(s) of interest?
 
-I think all the physicochemical test results may help support the investigation. All of them are related to characteristics which may affect the flavour of the wine. They correspond to concentration of molecules which may have an impact on taste. Density is a physical property which will depend on the percentage of alcohol and sugar content, which will also affect taste.
+I think all the physicochemical test results may help support the investigation. All of them are related to characteristics which may affect the flavor of the wine. They correspond to concentration of molecules which may have an impact on taste. Density is a physical property which will depend on the percentage of alcohol and sugar content, which will also affect taste.
 
-Some variables may have strong correlation with each other. For instance, the pH will depend on the ammount of acide molecules, while total sulfur dioxide may always follow a similar distribution of free sulfur dioxide.
+Some variables may have strong correlation with each other. For instance, the pH will depend on the amount of acid molecules, while total sulfur dioxide may always follow a similar distribution of free sulfur dioxide.
 
 ### Did you create any new variables from existing variables in the dataset?
 
@@ -847,7 +847,7 @@ The increase of both citric acid and alcohol tends to give higher quality wines.
 
 ![](P4_Wine_Quality_data_files/figure-html/unnamed-chunk-31-1.png)<!-- -->![](P4_Wine_Quality_data_files/figure-html/unnamed-chunk-31-2.png)<!-- -->
 
-For the range of sulfates between 0 and 1, alcohol and sulphates appear to have a positive correlation and higher alcohol combined with higher sulphates yields higher quality wines.
+For the range of sulphates between 0 and 1, alcohol and sulphates appear to have a positive correlation and higher alcohol combined with higher sulphates yields higher quality wines.
 
 
 ```
